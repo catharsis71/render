@@ -13,4 +13,3 @@ CACHE_CONTROL = "max-age=31536000, public, immutable"
 binding = "R2_BUCKET"
 bucket_name = "permanent"         # Set this to your R2 bucket name. Required
 #preview_bucket_name = "kot" # Set this to your preview R2 bucket name. Can be equal to bucket_name. Optional
-
