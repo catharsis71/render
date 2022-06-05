@@ -1,4 +1,4 @@
-name = "render"
+name = "cracky"
 main = "src/index.ts"
 compatibility_date = "2022-05-15"
 # Set this to false if you don't want to use the default *.workers.dev route.
@@ -11,5 +11,5 @@ CACHE_CONTROL = "max-age=86400"
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
-bucket_name = "kot"         # Set this to your R2 bucket name. Required
-preview_bucket_name = "kot" # Set this to your preview R2 bucket name. Can be equal to bucket_name. Optional
+bucket_name = "permanent"         # Set this to your R2 bucket name. Required
+#preview_bucket_name = "kot" # Set this to your preview R2 bucket name. Can be equal to bucket_name. Optional
