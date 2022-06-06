@@ -8,7 +8,7 @@ workers_dev = true
 [vars]
 # The `cache-control` header: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control. Optional, the `cache-control` header is omitted if unset.
 <<<<<<< HEAD
-CACHE_CONTROL = max-age=31536000, public, immutable"
+CACHE_CONTROL = "max-age=31536000, public, immutable"
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
