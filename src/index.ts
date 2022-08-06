@@ -5,12 +5,13 @@ interface Env {
   ALLOWED_ORIGINS?: string,
   CACHE_CONTROL?: string,
   PATH_PREFIX?: string
+  INDEX_FILE?: string
 }
 
 type ParsedRange = { offset: number, length: number } | { suffix: number };
 
 function rangeHasLength(object: ParsedRange): object is { offset: number, length: number } {
-  return (<{offset: number, length: number}>object).length !== undefined;
+  return (<{ offset: number, length: number }>object).length !== undefined;
 }
 
 function hasBody(object: R2Object | R2ObjectBody): object is R2ObjectBody {
@@ -36,7 +37,7 @@ export default {
     }
 
     const url = new URL(request.url);
-    if (url.pathname === "/") {
+    if (!env.INDEX_FILE && url.pathname === "/") {
       return new Response("OK");
     }
 
@@ -48,7 +49,12 @@ export default {
 
     if (!response || !response.ok) {
       console.warn("Cache miss");
-      const path = (env.PATH_PREFIX || "") + decodeURIComponent(url.pathname.substring(1));
+      let path = (env.PATH_PREFIX || "") + decodeURIComponent(url.pathname.substring(1));
+
+      // Look for index file if asked for a directory
+      if (env.INDEX_FILE && (path.endsWith("/") || path === "")) {
+        path += env.INDEX_FILE;
+      }
 
       let file: R2Object | R2ObjectBody | null | undefined;
 
