@@ -19,8 +19,16 @@ CACHE_CONTROL = "max-age=31536000, public, immutable"
 PATH_PREFIX = ""
 
 # Index file to search for on directory requests, set to "" to disable indexes
+# Relative to the directory of the request.
 #INDEX_FILE = ""
 INDEX_FILE = "index.html"
+
+# File to fall back to when the requested path is not found in the bucket.
+# Incurs an additional read operation for 404 requests.
+# Set to "" to disable custom 404 fallbacks.
+# Relative to the root of the bucket.
+NOTFOUND_FILE = ""
+#NOT_FOUND_FILE = "404.html"
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
