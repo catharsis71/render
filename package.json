@@ -1,8 +1,9 @@
 {
   "name": "render2",
-  "version": "0.6.0",
+  "version": "1.0.0",
   "author": "kotx",
   "description": "A Cloudflare worker for proxying readonly requests to Cloudflare R2",
+  "license": "MIT",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
