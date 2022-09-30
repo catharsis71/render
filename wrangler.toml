@@ -32,7 +32,7 @@ NOTFOUND_FILE = ""
 
 # Enable to show a directory listing fallback on paths ending in /
 # If INDEX_FILE is also provided, it will be used instead if the file exists. 
-DIRECTORY_LISTING = false
+DIRECTORY_LISTING = true
 
 # Enable to hide files or directories beginning with . from directory listings.
 HIDE_HIDDEN_FILES = false
