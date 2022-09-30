@@ -1,4 +1,4 @@
-import parseRange from "range-parser";
+﻿import parseRange from "range-parser";
 
 interface Env {
   R2_BUCKET: R2Bucket,
