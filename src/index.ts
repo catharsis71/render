@@ -140,7 +140,9 @@ ${htmlList.join("\n")}
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
     const allowedMethods = ["GET", "HEAD", "OPTIONS"];
-    if (allowedMethods.indexOf(request.method) === -1) return new Response("Method Not Allowed", { status: 405 });
+    if (allowedMethods.indexOf(request.method) === -1) {
+      return new Response("Method Not Allowed", { status: 405, headers: { "allow": allowedMethods.join(", ") } });
+    }
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: { "allow": allowedMethods.join(", ") } })
@@ -148,7 +150,6 @@ export default {
 
     let triedIndex = false;
 
-    const url = new URL(request.url);
     let response: Response | undefined;
 
     const isCachingEnabled = env.CACHE_CONTROL !== "no-store"
@@ -162,6 +163,7 @@ export default {
 
     if (!response || !(response.ok || response.status == 304)) {
       console.warn("Cache miss");
+      const url = new URL(request.url);
       let path = (env.PATH_PREFIX || "") + decodeURIComponent(url.pathname);
 
       // directory logic
