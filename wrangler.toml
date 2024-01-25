@@ -27,7 +27,7 @@ INDEX_FILE = "index.html"
 # Incurs an additional read operation for 404 requests.
 # Set to "" to disable custom 404 fallbacks.
 # Relative to the root of the bucket.
-NOTFOUND_FILE = ""
+NOTFOUND_FILE = "404.html"
 #NOT_FOUND_FILE = "404.html"
 
 # Enable to show a directory listing fallback on paths ending in /
