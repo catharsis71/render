@@ -34,11 +34,19 @@ NOTFOUND_FILE = ""
 # If INDEX_FILE is also provided, it will be used instead if the file exists. 
 DIRECTORY_LISTING = true
 
+# The number of items to show per page in directory listings.
+# Listings may also return less if the listing API call reaches a size limit.
+# Maximum of 1000.
+ITEMS_PER_PAGE = 1000
+
 # Enable to hide files or directories beginning with . from directory listings.
 HIDE_HIDDEN_FILES = false
 
 # Set a cache header here, e.g. "max-age=86400", if you want to cache directory listings.
 DIRECTORY_CACHE_CONTROL = "no-store"
+
+# Set debugging log enabled
+LOGGING = true
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
