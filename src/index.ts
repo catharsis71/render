@@ -115,7 +115,7 @@ async function makeListingResponse(
     if (path === "") path = "/";
 
     html = `<!DOCTYPE html>
-<html>
+<html lang="en-GB">
   <head>
     <title>Index of ${path}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
