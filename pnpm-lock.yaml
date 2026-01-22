@@ -20,7 +20,7 @@ devDependencies:
     specifier: ^5.8.3
     version: 5.8.3
   wrangler:
-    specifier: ^4.59.1
+    specifier: ^4.18.0
     version: 4.59.1(@cloudflare/workers-types@4.20250529.0)
 
 packages:
