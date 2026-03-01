@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^1.2.7
     version: 1.2.7
   typescript:
-    specifier: ^5.8.3
-    version: 5.8.3
+    specifier: ^5.9.3
+    version: 5.9.3
   wrangler:
     specifier: ^4.69.0
     version: 4.69.0(@cloudflare/workers-types@4.20260301.1)
@@ -766,8 +766,8 @@ packages:
     dev: true
     optional: true
 
-  /typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  /typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
