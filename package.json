@@ -15,7 +15,7 @@
     "prepublishOnly": "tsc"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20260401.1",
+    "@cloudflare/workers-types": "^4.20260501.1",
     "@types/range-parser": "^1.2.7",
     "typescript": "^6.0.2",
     "wrangler": "^4.78.0"
